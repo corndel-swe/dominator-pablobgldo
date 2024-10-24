@@ -10,15 +10,11 @@
  * @returns {string} 'fizz', 'buzz', 'fizzbuzz' or ''
  */
 export function fizzBuzz(num) {
-  if (num % 3 == 0 && num % 5 == 0) {
-    return 'fizzbuzz'
-  } else if (num % 3 == 0) {
-    return 'fizz'
-  } else if (num % 5 == 0) {
-    return 'buzz'
-  } else {
-    return ''
-  }
+  let result = '';
+
+  if (num%3 ===0) result+= 'fizz'
+  if (num%5 === 0) result += 'buzz'
+  return result
   // TODO: return 'fizz' if num is divisible by 3
   // TODO: return 'buzz' if num is divisible by 5
   // TODO: return 'fizzbuzz' if num is divisible by both 3 and 5
