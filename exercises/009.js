@@ -8,7 +8,14 @@
  * @returns {'player1' | 'player2' | 'tie'} The result of the game.
  */
 export const rockPaperScissors =
-  (/* TODO: accept `choice1` and `choice2` as parameters */) => {
+  (choice1, choice2) => {
+  if (choice1 == choice2) {
+    return 'tie'
+  } else if ((choice1=='rock' && choice2=='scissors') || (choice1=='scissors' && choice2=='paper') || (choice1=='paper' && choice2=='rock')) {
+    return 'player1'
+  } else {
+    return 'player2'
+  }
     // TODO: if player1 wins, return 'player1'
     // TODO: if player2 wins, return 'player2'
     // TODO: if tie, return 'tie'
